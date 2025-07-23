@@ -265,3 +265,9 @@ main section{
   padding: 24px 0px;
   background-color: gray;
 }
+.cursor-pointor{
+  cursor: pointer;
+}
+.p12{
+  padding: 4px;
+}
