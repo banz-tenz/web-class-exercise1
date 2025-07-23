@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h4>
+        <span class="material-symbols-outlined">
+          book_2
+      </span>
+        <span>
+          Library Management System
+        </span>
+      </h4>
+      <!-- menu item -->
+      <div>
+        <a href="#">
+          <span class="material-symbols-outlined">
+            dashboard
+          </span>
+          <span>
+            Dashbord
+          </span>
+
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">
+            group
+          </span>
+          <span>
+            Members
+          </span>
+
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">
+            list_alt
+          </span>
+          <span>
+            Book list
+          </span>
+
+        </a>
+        <a href="#">
+          <span class="material-symbols-outlined">
+            history
+          </span>
+          <span>
+            Borrow & Return
+          </span>
+
+        </a>
+      </div>
+      <!-- end of menu item -->
+       <!-- user profile -->
+      <div>
+        <p id="user-profile">J</p>
+        <p>Jonh smith</p>
+      </div>
+        <!-- end of user profile -->
+    </nav>
+  </header>
+  <main>
+    <!-- flex container -->
+    <section class="flex justify-between">
+      <!-- container item -->
+      <div>
+          <h2>
+            Welcome back Jonh Smith
+          </h2>
+          <p>Quick access on our system with this dashboard
+          </p>
+      </div>
+      <!-- container item -->
+      <div>
+        <button class="btn" id="blue-btn">Add new member</button>
+        <button class="btn" id="green-btn">Add new group</button>
+        <button class="btn" id="orange-btn">Return Book</button>
+        <button class="btn" id="teal-btn">Borrow book</button>
+      </div>
+    </section>
+    <section>
+      <div class="card">
+        <h4>System overview</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="flex justify-between">
+          <div class="item flex flex-col align-center mx-y-24">
+            <div id="icon-container" class="justify-center flex align-center member-card">
+              <span class="material-symbols-outlined">
+                group
+              </span>
+            </div>
+            <h3 class="text-large">200</h3>
+            <p class="text-small"> Total Members</p>
+          </div>
+          <div class="item flex flex-col align-center mx-y-24">
+            <div id="icon-container" class="justify-center flex align-center total-book ">
+              <span class="material-symbols-outlined">
+              book_6
+            </span>
+            </div>
+            <h3 class="text-large">2300</h3>
+            <p class="text-small"> Total Book</p>
+          </div>
+          <div class="item flex flex-col align-center mx-y-24">
+            <div id="icon-container" class="justify-center flex align-center available-book">
+              <span class="material-symbols-outlined">
+                event_available
+              </span>
+            </div>
+            <h3 class="text-large">200</h3>
+            <p class=""> Availble book for borrow</p>
+          </div>
+          <div class="item flex flex-col align-center mx-y-24">
+            <div id="icon-container" class="justify-center flex align-center book-has-borrowed">
+              <span class="material-symbols-outlined">
+                auto_stories_off
+              </span>
+            </div>
+            <h3 class="text-large">35</h3>
+            <p class="text-small">Book has been borrow today</p>
+          </div>
+          <div class="item flex flex-col align-center mx-y-24">
+            <div id="icon-container" class="justify-center flex align-center book-returned">
+              <span class="material-symbols-outlined">
+                timer
+              </span>
+            </div>
+            <h3 class="text-large">06</h3>
+            <p class="text-small">Book will return today</p>
+          </div>
+          <div class="item flex flex-col align-center mx-y-24">
+            <div id="icon-container" class="justify-center flex align-center book-return-late">
+              <span class="material-symbols-outlined">
+                alarm_off
+              </span>
+            </div>
+            <h3 class="text-large">03</h3>
+            <p class="text-small">Book late to return</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card">
+        <h4 class="my-24 mb text-large">
+          Record of the books that will return today and over deadline.
+        </h4>
+        <table class="border-collapes text-small" id="table">
+          <thead>
+            <tr >
+              <th class="text-uppercase text-color-lightgray text-align-left">member id</th>
+              <th class="text-uppercase text-color-lightgray text-align-left">member name</th>
+              <th class="text-uppercase text-color-lightgray text-align-left">book title</th>
+              <th class="text-uppercase text-color-lightgray text-align-left">borrow date</th>
+              <th class="text-uppercase text-color-lightgray text-align-left">due date</th>
+              <th class="text-uppercase text-color-lightgray ">stuts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-top-button">
+              <td class="text-uppercase font-bold">mem001</td>
+              <td>Alice Johson</td>
+              <td>The Green land</td>
+              <td>2024-07-01</td>
+              <td>2024-07-15</td>
+              <td><p class="book-return-late text-algign-center" id="late">Late</p></td>
+            </tr>
+            <tr>
+              <td class="text-uppercase font-bold">mem002</td>
+              <td>Alice Johson</td>
+              <td>The Green land</td>
+              <td>2024-07-01</td>
+              <td>2024-07-15</td>
+              <td><p class="book-returned text-algign-center" id="ontime">On time</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <div class="card">
+        <h4 class="my-24 mb text-large">
+          Popular books
+        </h4>
+        <table id="table" class="border-collapes text-small">
+          <thead>
+            <tr class=" text-uppercase text-align-left ">
+              <th class="text-color-lightgray">book id</th>
+              <th class="text-color-lightgray">title</th>
+              <th class="text-color-lightgray">author</th>
+              <th class="text-color-lightgray">gener</th>
+              <th class="text-color-lightgray">availablity</th>
+              <th class="text-color-lightgray">actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-top-button">
+              <td class="text-uppercase font-bold">bk001</td>
+              <td>The Great Adventure</td>
+              <td>Jane Doe</td>
+              <td>Fantasy</td>
+              <td><p class="avaibale text-algign-center book-returned avaibale-color">Available</p></td>
+              <td>
+                <span id="blue">Edit</span>
+                <span id="late">Delete</span>
+              </td>
+            </tr>
+            <tr class="border-top-button">
+              <td class="text-uppercase font-bold">bk002</td>
+              <td>My stery of the Old House</td>
+              <td>Jane Doe</td>
+              <td>Fantasy</td>
+              <td><p class="avaibale text-algign-center book-returned avaibale-color">Available</p></td>
+              <td>
+                <span id="blue">Edit</span>
+                <span id="late">Delete</span>
+              </td>
+            </tr>
+            <tr class="border-top-button">
+              <td class="text-uppercase font-bold">bk003</td>
+              <td>Coding for Begnners</td>
+              <td>Jane Doe</td>
+              <td>Fantasy</td>
+              <td><p class="avaibale text-algign-center book-returned avaibale-color">Available</p></td>
+              <td>
+                <span id="blue">Edit</span>
+                <span id="late">Delete</span>
+              </td>
+            </tr>
+            <tr class="border-top-button">
+              <td class="text-uppercase font-bold">bk004</td>
+              <td>The Art of Cooking</td>
+              <td>Jane Doe</td>
+              <td>Fantasy</td>
+              <td><p class="avaibale text-algign-center book-returned avaibale-color">Available</p></td>
+              <td>
+                <span id="blue">Edit</span>
+                <span id="late">Delete</span>
+              </td>
+            </tr>
+            <tr class="border-top-button">
+              <td class="text-uppercase font-bold">bk005</td>
+              <td>The Art of Cooking</td>
+              <td>Jane Doe</td>
+              <td>Fantasy</td>
+              <td><p id="late" class="avaibale text-algign-center book-return-late">Unavailable</p></td>
+              <td>
+                <span id="blue">Edit</span>
+                <span id="late">Delete</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+  <p class="text-algign-center py-24">@AGA institude</p>
+  </footer>
+</body>
+</html>
